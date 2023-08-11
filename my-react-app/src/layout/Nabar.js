@@ -22,7 +22,7 @@ const Nabar = () => {
              <span className="navbar-toggler-icon"></span> 
             </button>*/}
    
-            <Link className='btn btn-outline-danger' to='/addUser'>Add User</Link>    
+            {/* <Link className='btn btn-outline-danger' to='/addUser'>Add User</Link>     */}
             <Link className='btn btn-outline-light' to='/file'>CSV file</Link> 
         </div>
       </nav>

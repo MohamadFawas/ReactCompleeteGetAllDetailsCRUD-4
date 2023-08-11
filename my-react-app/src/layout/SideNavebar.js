@@ -25,6 +25,14 @@ const SideNavebar = () => {
         navigate('/addEmployee');
       };
 
+      const allDetails = () => {
+        navigate('/allDetails');
+      };
+
+      
+
+
+
       const listItems = document.querySelectorAll(".list-group-item");
   listItems.forEach(item => {
     item.addEventListener("click", () => {
@@ -86,6 +94,13 @@ const SideNavebar = () => {
             <i className='bi bi-table fs-5 me-3'></i>
             <span className='fs-5' onClick={addEmployee}>Add BUD</span>
         </a>
+
+        {/* <a className='list-group-item py-2'>
+            <i className='bi bi-table fs-5 me-3'></i>
+            <span className='fs-5' onClick={allDetails}>Add BUD</span>
+        </a> */}
+
+        
 
     </div>
   </div>

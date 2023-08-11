@@ -114,6 +114,15 @@ public class BookSeviceImp implements BookService {
 
 	}
 
+	@Override
+	public boolean isUpdatedLibrary_managementIndexNumberExist(Long id, String indexNumber) {
+		
+//		 return bookRepository.existsByNameIgnoreCaseAndIdNot(name, id);
+		return bookRepository.existsByIndexNumberIgnoreCaseAndIdNot(indexNumber, id);
+	}
+
+	
+
 //	@Override
 //	public List<BookResponceDto> multiSearchBook(LibraryManagementSearch libraryManagementSearch) {
 //		BooleanBuilder booleanBuilder =new BooleanBuilder();

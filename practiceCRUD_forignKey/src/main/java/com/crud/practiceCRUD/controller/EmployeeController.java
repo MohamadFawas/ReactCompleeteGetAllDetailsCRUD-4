@@ -72,8 +72,8 @@ public class EmployeeController {
 	  }
 	 
 	 
-	 @PutMapping("/update1")
-	  public ResponseEntity<Object> updateEmployee(@RequestBody EmployeeRequest employeeRequest) {
+	 @PutMapping("/update1/{id}")
+	  public ResponseEntity<Object> updateEmployee(@PathVariable Long id,@RequestBody EmployeeRequest employeeRequest) {
 	    if (!employeeService.existByEmployee(employeeRequest.getId())) {
 	  
 	    	return ResponseEntity.ok(new BaseResponse(validationFailerresponce.getValidationBookAlreadyExists(),

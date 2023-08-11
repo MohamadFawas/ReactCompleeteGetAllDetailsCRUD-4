@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const EmployeeHome = () => {
  
@@ -31,7 +32,7 @@ const EmployeeHome = () => {
       <th scope="col">firstName</th>
       <th scope="col">lastName</th>
       <th scope="col">gender</th>
-      <th scope="col" >lMId</th>
+      <th scope="col" >LMId</th>
       <th scope="col">email</th>
       <th scope="col">contactNumber</th>
       <th scope="col">availability</th>
@@ -54,19 +55,22 @@ const EmployeeHome = () => {
         <td>{user.title}</td>
         
         <td className="mx-2">
-        {/* <Link to={`/viewUser/${user.id}`}><button className='btn btn-primary mx-2' >View</button></Link>
+          <td>
+        <Link to={`/viewEmployee/${user.id}`}><button className='btn btn-primary mx-2' >View</button></Link>
 
-        <Link to={`/editUser/${user.id}`}><button className="btn btn-outline-primary mx-2" >Edit</button></Link>
+        <Link to={`/editEmployee/${user.id}`}><button className="btn btn-outline-primary mx-2" >Edit</button></Link>
             
-           < Link to={`/delete/${user.id}`}><button className="btn btn-danger mx-2" >Delete</button></Link>
-             */}
-             <button className='btn btn-primary mx-2' >View</button>
+           < Link to={`/deleteEmployee/${user.id}`}><button className="btn btn-danger mx-2" >Delete</button></Link>
+            
+             {/* <button className='btn btn-primary mx-2' >View</button>
              
-             {/* <button className='btn btn-primary mx-2' >View</button> */}
+             {/* <button className='btn btn-primary mx-2' >View</button> 
         </td>
         <td><button className='btn btn-primary mx-2' >View</button></td>
         <td><button className='btn btn-primary mx-2' >View</button></td>
-        
+         */}
+         </td>
+         </td>
         </tr>
     ))
 }

@@ -20,6 +20,7 @@ public interface BookService {
 	
 	//public boolean getLibrary_managementById(Long id);
 	public void deleteLibrary_management(Long id);
+	public boolean isUpdatedLibrary_managementIndexNumberExist(Long id, String indexNumber);
 	
 //	void importProjectStatuss(MultipartFile file) throws IOException;
 	

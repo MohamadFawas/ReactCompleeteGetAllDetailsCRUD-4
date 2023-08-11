@@ -43,6 +43,13 @@ public class BookController {
 			return ResponseEntity.ok(new BaseResponse(validationFailerresponce.getValidationBookAlreadyExists(),
 					validationFailerresponce.getFailureCode()));
 		}
+		
+			
+			  if (bookService.isUpdatedLibrary_managementIndexNumberExist(bookRequestDto.getId(),
+					  bookRequestDto.getName())) {
+				  return ResponseEntity.ok(new BaseResponse(validationFailerresponce.getSaveBookSuccessMessage(),
+							validationFailerresponce.getCommonSuccessCode()));
+			  }
 
 		bookService.saveLibrary_management(bookRequestDto);
 		return ResponseEntity.ok(new BaseResponse(validationFailerresponce.getSaveBookSuccessMessage(),
@@ -72,10 +79,10 @@ public class BookController {
 	
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Object> updateLibrary_management(@PathVariable Long id, @RequestBody BookRequestDto bookRequestDto) {
-		if ((bookService.existsIndexNumberIgnoreCase(bookRequestDto.getIndexNumber()))) {
-			return ResponseEntity.ok(new BaseResponse(validationFailerresponce.getErrorNotFoundIdMessage(),
-					validationFailerresponce.getErrorNotFoundIdCode()));
-		}
+//		if ((bookService.existsIndexNumberIgnoreCase(bookRequestDto.getIndexNumber()))) {
+//			return ResponseEntity.ok(new BaseResponse(validationFailerresponce.getErrorNotFoundIdMessage(),
+//					validationFailerresponce.getErrorNotFoundIdCode()));
+//		}
 
 		bookService.saveLibrary_management(bookRequestDto);
 		return ResponseEntity.ok(new BaseResponse(validationFailerresponce.getSaveBookSuccessMessage(),

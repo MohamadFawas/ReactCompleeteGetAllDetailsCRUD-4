@@ -10,7 +10,7 @@ public class EmployeeRequest {
 	  private String firstName;
 	  private String lastName;
 	  private String gender;
-	  private Long library_managementId;
+	  private Long libraryManagementId;
 //	  private String designationName;
 	  private String email;
 	  private String contactNumber;

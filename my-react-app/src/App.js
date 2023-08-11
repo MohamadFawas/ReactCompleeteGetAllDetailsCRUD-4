@@ -13,6 +13,11 @@ import SideNavebar from './layout/SideNavebar';
 import Dashboard from './pages/Dashboard';
 import EmployeeHome from './pages/EmployeeHome';
 import CSVfile from './users/CSVfile';
+import AddEmployee from './bookUserDetails/AddEmployee';
+import ViewEmployee from './bookUserDetails/ViewEmployee';
+import DeleteEmployee from './bookUserDetails/DeleteEmployee';
+import AllDetails from './users/AllDetails';
+import EditEmployee from './bookUserDetails/EditEmployee';
 
 // import ViewUser from './users/ViewUser';
 function App() {
@@ -42,7 +47,12 @@ function App() {
         <Route exact path="/dashboard" element={<Dashboard/>}/>
         <Route exact path="/file" element={<CSVfile/>}/>
         <Route exact path="/employeeHome" element={<EmployeeHome/>}/>
-
+        <Route exact path="addEmployee" element={<AddEmployee/>}/>
+        <Route exact path="/viewEmployee/:id" element={<ViewEmployee/>}/>
+        <Route exact path="/deleteEmployee/:id" element={<DeleteEmployee/>}/>
+        <Route exact path="/allDetails/:id" element={<AllDetails/>}/>
+        <Route exact path="/editEmployee/:id" element={<EditEmployee/>}/>
+      
       </Routes>
 
             </div>

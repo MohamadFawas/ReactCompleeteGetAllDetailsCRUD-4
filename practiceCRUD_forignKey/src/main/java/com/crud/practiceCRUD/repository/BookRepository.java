@@ -9,4 +9,5 @@ public interface BookRepository extends JpaRepository <Library_management, Long>
 
 	public boolean existsByIndexNumberIgnoreCase(String indexNumber);
 	//public boolean exiexistsById(Long id);
+	boolean existsByIndexNumberIgnoreCaseAndIdNot(String indexNumber, Long id);
 }

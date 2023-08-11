@@ -49,8 +49,9 @@ import { Link } from 'react-router-dom';
 
         <Link to={`/editUser/${user.id}`}><button className="btn btn-outline-primary mx-2" >Edit</button></Link>
             
-           < Link to={`/delete/${user.id}`}><button className="btn btn-danger mx-2" >Delete</button></Link>
-            
+        < Link to={`/delete/${user.id}`}><button className="btn btn-danger mx-2" >Delete</button></Link>
+        < Link to={`/allDetails/${user.id}`}><button className="btn btn-danger mx-2" >Details</button></Link>
+        
         </td>
         </td>
         </tr>

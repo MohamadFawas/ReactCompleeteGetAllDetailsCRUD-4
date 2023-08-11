@@ -27,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	    Employee employee = new Employee();
 	    BeanUtils.copyProperties(employeeRequest, employee);
 	    Library_management library_management = new Library_management();
-	    library_management.setId(employeeRequest.getLibrary_managementId());
+	    library_management.setId(employeeRequest.getLibraryManagementId());
 //	    employee.setLibrary_management(library_management);
 	    employee.setLibraryManagement(library_management);
 	    employeeRepository.save(employee);
@@ -56,7 +56,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	      EmployeeResponse employeeResponse = new EmployeeResponse();
 	      BeanUtils.copyProperties(employee, employeeResponse);
 //	      employeeResponse.setLibrary_managementId(employee.getLibrary_management().getId());
-	      employeeResponse.setLibrary_managementId(employee.getLibraryManagement().getId());
+	      employeeResponse.setLibraryManagementId(employee.getLibraryManagement().getId());
 //	      employeeResponse.setDesignationName(employee.getDesignation().getName());
 	      employeeResponses.add(employeeResponse);
 	    }
@@ -70,7 +70,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	    EmployeeResponse employeeResponse = new EmployeeResponse();
 	    BeanUtils.copyProperties(employee, employeeResponse);
 	    //employeeResponse.setLibrary_managementId(employee.getLibrary_management().getId());
-	    employeeResponse.setLibrary_managementId(employee.getLibraryManagement().getId());
+	    employeeResponse.setLibraryManagementId(employee.getLibraryManagement().getId());
 //	    employeeResponse.setDesignationName(employee.getDesignation().getName());
 
 	    return employeeResponse;
